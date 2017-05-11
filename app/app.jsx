@@ -11,6 +11,13 @@ const Weather = require('Weather');
 const About = require('About');
 const Examples = require('Examples');
 
+//Load foundations
+//css! is from the css-loader that was installed.
+//style! is from the style-loader that was installed and tells how to install a css file.
+require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+//starts up foundation
+$(document).foundation();
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route exact path="/" component={Main}>
