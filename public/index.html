@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!-- HEAD STARTS HERE -->
+	<head>
+	    <!--The following two items should be web.config -->
+		<meta charset="utf-8">
+		<!-- <meta http-equiv="X-UA-Compatible" content="ID=edge"> -->
+		<!--Sets the content display area based on the device displaying it and without zoom-->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<!-- The response headers for the site in IIS needs to be set to expire immediately for this to work -->
+        <!-- If the page will not stay fairly static over time, comment out the following line -->
+        <!-- <meta http-equiv="Cache-control" content="cache"> -->
+
+        <!-- Title of the page -->
+		<title>React</title>
+
+        <!-- Bootstrap Core CSS -->
+        <!-- File is stored in versioned directory for the following reasons:
+            1.  .css file can have an expires date multiple years in the future so it won't download again
+            2.  when a new version comes out, the new version can be used by what needs to use it without breaking something else-->
+		<!--<link href="css/bootstrap-3.3.7/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-3.3.7/bootstrap-theme.min.css" rel="stylesheet"> -->
+
+        <!-- Site Specific CSS -->
+
+        <!-- Page Specific CSS -->
+
+        <!-- History of change goes here -->
+
+		<!-- The following is for older versions of IE but won't be included.  Here just as reference -->
+		<!-- [if lt IE 9]
+			<script src="https://oss.maxcdn/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn/libs/respond.js/1.4.2/respond.min.js"></script>
+			[end if -->
+	</head>
+
+	<!-- BODY STARTS HERE -->
+	<body>
+		<div id="app"></div>
+		<!-- <h1>React Training</h1> -->
+    <!-- Javascript is loaded last to prevent the slowdown of page rendering -->
+		<!-- Babel -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script> -->
+		<!-- React -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script> -->
+    <!-- jQuery -->
+		<!-- <script src="js/jquery-3.2.1/jquery-3.2.1.min.js"></script> -->
+    <!-- Bootstrap Core JavaScript -->
+		<!-- <script src="js/bootstrap-3.3.7/bootstrap.min.js"></script> -->
+
+    <!-- Site Specific JavaScript -->
+
+    <!-- Page Specific JavaScript -->
+		<!-- <script type="text/babel" src="app.jsx"></script> -->
+		<script src="bundle.js"></script>
+    <!-- Consider converting custom script to its own .js file and including it.  This will allow it to be cached and reduce overall network traffic. -->
+    <!-- When to convert will depend largely on efficiency.  More files means more http requests when fewer is also better.  Also, if page is static and cached, is it worth the effort?-->
+
+	</body>
+
+</html>
