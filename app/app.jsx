@@ -15,6 +15,7 @@ const Examples = require('Examples');
 //css! is from the css-loader that was installed.
 //style! is from the style-loader that was installed and tells how to install a css file.
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+require('style-loader!css-loader!applicationStyles');
 //starts up foundation
 $(document).foundation();
 
