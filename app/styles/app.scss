@@ -1,12 +1,6 @@
-$space-large: 2.5rem;
-$title-color: blue;
+//Do not include _ or suffix when including partial files.
+@import "base/variables";
 
-.page-title {
-  color: $title-color;
-  margin-top: $space-large;
-  margin-bottom: $space-large;
-}
-
-input[type=search] {
-  box-shadow: none;
-}
+//components
+@import "components/navigation";
+@import "components/page-title";

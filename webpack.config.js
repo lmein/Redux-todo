@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+// const path = require('path');
 
 module.exports = {
   entry: [
@@ -20,17 +21,15 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
-    modules: [__dirname, 'node_modules'],
+    //modules: [__dirname, 'node_modules'],
+    // root: __dirname,
+    modules: [
+      'node_modules',
+      './app/components'
+    ],
     alias: {
-      Main: 'app/components/main.jsx',
-      Nav: 'app/components/nav.jsx',
-      Weather: 'app/components/weather.jsx',
-      About: 'app/components/about.jsx',
-      Examples: 'app/components/examples.jsx',
-      WeatherForm: 'app/components/weatherForm.jsx',
-      WeatherMessage: 'app/components/weatherMessage.jsx',
-      OpenWeatherMap: 'app/api/openWeatherMap.jsx',
-      ErrorModal: 'app/components/errorModal.jsx',
+      // Main: 'app/components/main.jsx',
+      // Nav: 'app/components/nav.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['*', '.js', '.jsx']
@@ -47,5 +46,10 @@ module.exports = {
       }
     ]
   },
+  // sassLoader: {
+  //   includePaths: [
+  //     path.resolve(__dirname, './node_modules/foundation-sites/scss')
+  //   ]
+  // },
   devtool: 'cheap-module-eval-source-map'
 };
