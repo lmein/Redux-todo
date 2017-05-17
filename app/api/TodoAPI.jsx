@@ -26,5 +26,42 @@ module.exports = {
     // } else {
     //   return [];
     // }
+  },
+  filterTodos: function (todos, showCompleted, searchText) {
+    var filteredTodos = todos;
+
+    //Filter by showCompleted
+    filteredTodos = filteredTodos.filter((todo) => {
+      return !todo.completed || showCompleted;
+    });
+
+    //Filter by searchText
+    filteredTodos = filteredTodos.filter((todo) => {
+      var text = todo.text.toLowerCase();
+      //if nothing is in search box, return everything OR text contains the text search phrase
+      return searchText.length === 0 || text.indexOf(searchText) > -1;
+    });
+
+    //Sort Todos with non-completed first
+    filteredTodos.sort((a, b) => {
+      // //telling sort a should be before b
+      // return -1
+      // //telling sort b should be before a
+      // return 1
+      // //no change in sort
+      // return 0
+      if (!a.completed && b.completed) {
+      //if (a.completed === false && b.completed === true) {
+        return -1;
+      } else if (a.completed && !b.completed) {
+      // } else if (a.completed === true && b.completed === false) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+
+    return filteredTodos;
   }
 };
+// ReferenceError: todoText is not defined
