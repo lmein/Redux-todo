@@ -15,7 +15,7 @@ const TodoApp = require('TodoApp');
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 
 //app css
-//require('style-loader!css-loader!sass-loader!applicationStyles');
+require('style-loader!css-loader!sass-loader!applicationStyles');
 //starts up foundation
 $(document).foundation();
 

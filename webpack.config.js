@@ -24,13 +24,12 @@ module.exports = {
     //modules: [__dirname, 'node_modules'],
     // root: __dirname,
     modules: [
+      __dirname,
       'node_modules',
       './app/components',
       './app/api'
     ],
     alias: {
-      // Main: 'app/components/main.jsx',
-      // Nav: 'app/components/nav.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['*', '.js', '.jsx']
