@@ -10,7 +10,7 @@ const TestUtils = require('react-dom/test-utils');
 const Todo = require('Todo');
 
 describe('Todo', () => {
-  it('Should properly run tests.', () => {
+  it('Should exist.', () => {
     expect(Todo).toExist();
   });
 });

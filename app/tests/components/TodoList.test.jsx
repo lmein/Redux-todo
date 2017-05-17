@@ -11,7 +11,7 @@ const TodoList = require('TodoList');
 const Todo = require('Todo');
 
 describe('TodoList', () => {
-  it('Should properly run tests.', () => {
+  it('Should exist.', () => {
     expect(TodoList).toExist();
   });
 

@@ -10,7 +10,17 @@ const TestUtils = require('react-dom/test-utils');
 const TodoApp = require('TodoApp');
 
 describe('TodoApp', () => {
-  it('Should properly run tests.', () => {
+  it('Should exist.', () => {
     expect(TodoApp).toExist();
+  });
+
+  it('Should add todo to the todos state on handleAddTodo.', () => {
+    var todoText = 'Dummy test item 1';
+    var todoApp = TestUtils.renderIntoDocument(<TodoApp/>);
+
+    todoApp.setState({todos: []});
+    todoApp.handleAddTodo(todoText);
+
+    expect(todoApp.state.todos[0].text).toBe(todoText);
   });
 });
