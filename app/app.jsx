@@ -7,7 +7,7 @@ const {Route, Router, IndexRoute, hashHistory} = require('react-router');
 // const hashHistory = require('react-router').hashHistory;
 // weather api key: df7e3c98ca0017fe242189315a17b64e
 // const Main = require('Main');
-const TodoApp = require('TodoApp');
+// const TodoApp = require('TodoApp');
 
 //Load foundations
 //css! is from the css-loader that was installed.
@@ -20,7 +20,8 @@ require('style-loader!css-loader!sass-loader!applicationStyles');
 $(document).foundation();
 
 ReactDOM.render(
-  <TodoApp/>,
+  <p>App.jsx</p>,
+  // <TodoApp/>,
   // <Router history={hashHistory}>
   //   <Route exact path="/" component={Main}>
   //     // <Route path="countdown" component={Countdown}/>
@@ -32,3 +33,5 @@ ReactDOM.render(
 // <Route path="about" component={About}/>
 // <Route path="examples" component={Examples}/>
 // <IndexRoute component={Weather}/>
+
+require('./redux-example.jsx');
